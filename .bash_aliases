@@ -6,6 +6,7 @@ alias avd='/home/nick/Android/Sdk/tools/android avd'
 alias wifi='sudo systemctl restart network-manager.service'
 alias clog='tail -f log/server.log'
 alias xmod='xmodmap ~/.xmodmap'
+alias cvatdb='mysql -uroot -e "drop database if exists l43qdmlx_orders;"&&mysql -uroot -e "create database l43qdmlx_orders;"&&echo "ok :)"'
 
 function cl() {
   clear
