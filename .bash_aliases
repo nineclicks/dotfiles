@@ -7,7 +7,7 @@ alias wifi='sudo systemctl restart network-manager.service'
 alias clog='tail -f log/server.log'
 alias xmod='xmodmap ~/.xmodmap'
 alias cvatdb='mysql -uroot -e "drop database if exists l43qdmlx_orders;"&&mysql -uroot -e "create database l43qdmlx_orders;"&&echo "ok :)"'
-alias cvatpsql='psql -U postgres -c "drop database if exists cvat;"&&psql -U postgres -c "create database cvat;"&&echo "ok =)"'
+alias cvatpsql='psql -U postgres -c "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = '"'"'cvat'"'"' AND pid <> pg_backend_pid();" && psql -U postgres -c "drop database if exists cvat;"&&psql -U postgres -c "create database cvat;"&&echo "ok =)"'
 
 function cl() {
   clear
