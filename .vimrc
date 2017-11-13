@@ -40,6 +40,8 @@ noremap <F2> :NERDTreeToggle<CR>
 " set the working directory when changing root
 let NERDTreeChDirMode = 2
 
+set clipboard=unnamedplus
+
 """ vim discipline
 " unmap the arrow keys
 noremap <Up> <nop>
