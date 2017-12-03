@@ -39,6 +39,6 @@ _apa()
 complete -F _apa apa
 
 function rpi() {
-  umount $(df -h | grep -Po "(.*$1.*?) " | tr '\n' ' ')
-  sudo dd bs=4M if=$2 of=/dev/$1 status=progress conv=fsync
+  umount $(df -h | grep -Po "(.*mmcblk0.*?) " | tr '\n' ' ')
+  sudo dd bs=4M if=$1 of=/dev/mmcblk0 status=progress conv=fsync
 }

@@ -18,6 +18,8 @@ Plugin 'nerdtree'
 Plugin 'surround'
 Plugin 'vim-fireplace'
 
+let g:jsx_ext_required = 0
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
