@@ -104,3 +104,14 @@ autocmd BufReadPost *
       \ if &readonly
       \| colo rockets-away
       \| endif
+
+function! Checksemicolon()
+  :normal $
+  if getline(".")[col(".")-1] == ';'
+    :startinsert
+  else
+    :startinsert!
+  endif
+endfunction
+
+nnoremap <S-a> :call Checksemicolon()<CR>
