@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 git submodule update --init --recursive
-ln -sf $PWD/.bash_aliases ~/.bash_aliases
-ln -sf $PWD/.tmux.conf    ~/.tmux.conf
-ln -sf $PWD/.vim          ~/.vim
-ln -sf $PWD/.vimrc        ~/.vimrc
-ln -sf $PWD/.xmodmap      ~/.xmodmap
+ln -sfn $PWD/bash_aliases ~/.bash_aliases
+ln -sfn $PWD/tmux.conf    ~/.tmux.conf
+ln -sfn $PWD/vim          ~/.vim
+ln -sfn $PWD/vimrc        ~/.vimrc
+ln -sfn $PWD/xmodmap      ~/.xmodmap
