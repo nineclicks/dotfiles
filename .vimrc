@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+syntax on
 filetype off                  " required
 " 256-color terminal
 " set t_Co=256
