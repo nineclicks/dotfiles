@@ -11,6 +11,7 @@ alias cvatpsql='psql -U postgres -c "SELECT pg_terminate_backend(pg_stat_activit
 alias restartadb='sudo adb kill-server&&sudo adb start-server&&echo "ok :)"'
 alias we='clear;curl wttr.in'
 alias macapa='sudo vi /etc/apache2/httpd.conf && sudo apachectl restart'
+alias gitconfig='git config --global user.email "nicholasg1989@gmail.com" && git config --global user.name "Nick"'
 
 function cl() {
   clear
