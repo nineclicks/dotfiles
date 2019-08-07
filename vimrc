@@ -18,6 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'nerdtree'
 Plugin 'surround'
 Plugin 'vim-fireplace'
+Plugin 'davidhalter/jedi-vim'
 
 let g:jsx_ext_required = 0
 
@@ -43,18 +44,18 @@ noremap <F2> :NERDTreeToggle<CR>
 " set the working directory when changing root
 let NERDTreeChDirMode = 2
 
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 """ vim discipline
 " unmap the arrow keys
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
+"noremap <Up> <nop>
+"noremap <Down> <nop>
+"noremap <Left> <nop>
+"noremap <Right> <nop>
+"inoremap <Up> <nop>
+"inoremap <Down> <nop>
+"inoremap <Left> <nop>
+"inoremap <Right> <nop>
 imap jj <Esc>
 
 " Enable line numbers.
@@ -105,3 +106,7 @@ autocmd BufReadPost *
       \ if &readonly
       \| colo rockets-away
       \| endif
+
+if (substitute(system('uname'), '\n', '', '') == 'Darwin')
+  colo desert
+endif
